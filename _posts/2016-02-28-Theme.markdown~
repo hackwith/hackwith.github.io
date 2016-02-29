@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "Hack with Github"
+date:   2016-02-18 00:40:00
+categories: Theme
+shortnote: "More details about the author(s) and the motto of the blog."
+---
+
+Greetings Hacker, you are now at the right place to gain knowledge on different Open Source tools used in different stages of hacking. This blog is completely about Open Source Security Tools present in Github.
+
+##Why?
+
+Security is a very big domain which contains a lot of automated tools to check the security of a product(web apps/system os). But the biggest drawback of some tools is their prices. Most people use/try to download pirated versions of Security tools (whose sourcecode may sometime be recompiled with a backdoor/virus). If you google on any security tool with the extention `94fbr` [for finding cracked version of any software] you will be surprized to see many links showing download option. But 60% of the time, you will end up downloading an adware or a third party software instead of the required tool.
+
+Instead of going through a large process of searching a pirated pentest tool, you could collect a bunch of open source tools, link them, alter the code to make some changes to fit your requirements and then use them.
+
+The advantages of open source tools are:
+
+* Open source tools are typically created as a **collaborative effort** in which programmers improve upon the code and share the changes within the community
+* It is usually available at **no charge** under a license defined by the Open Source Initiative.
+* Open source tools may be viable **alternatives** to popular closed-source applications
+* Some open source tools offers **features or performance benefits** that surpass their commercial counterparts
+* One can also gain **knowledge in programming**
+
+##Who?
+
+This blog is actually meant for collaborative effort of independent bloggers who likes to show people **the power of Open Source**. This site is currently maintained by [Chandrapal](http://twitter.com/bnchandrapal).
+
+##What?
+
+This blog is totally open source and if you want to host a similar site or add even more tools, you could just commit your changes to my repository. This site is built using Jekyll and freely hosted by Github.
+
+This blog is meant only for publishing free and open source tools found in Github.
+
+##How to contribute:
+
+You could contribute either by pushing a change to Git repository or by sending a  mail to me suggesting the latest releases/tools.
+
+##License
+
+This project uses the [MIT lisense][MIT].<br>Click [here][lic] to view more.
+
+[MIT]: https://opensource.org/licenses/MIT
+[lic]: {{ site.baseurl }}/2016/02/18/license

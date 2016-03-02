@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ProxyChains"
-date:   2016-02-28 01:40:00
+date:   2016-02-18 01:40:00
 categories: Proxy
 shortnote: "ProxyChains is a UNIX program, that hooks network-related libc functions in dynamically linked programs via a preloaded DLL and redirects the connections through SOCKS4a/5 or HTTP proxies."
 ---
@@ -65,10 +65,6 @@ sudo make install
 
 ##Useful links:
 <footer>
-<a href="https://github.com/pietromenna/jekyll-architect-theme/archive/master.zip" target="_blank" class="button">
-<small>Download</small>
-.zip file
-</a>
 <a href="https://github.com/pietromenna/jekyll-architect-theme/archive/master.zip" target="_blank" class="button">
 <small>Download</small>
 .zip file

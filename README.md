@@ -1,9 +1,13 @@
-##README
+## README
 This site is built using Jekyll and freely hosted by Github. Currently it is using an altered Architect theme. For more details check the theme of the site.
 
-##LICENSE
+## CONTRIBUTORS
+- [Chandrapal](https://github.com/Chan9390)
+- [Gildásio Júnior](https://github.com/gjuniioor)
+
+## LICENSE
 **The MIT License (MIT)**
-**Copyright (c) 2016 Chandrapal**
+**Copyright (c) 2016 Hack with Github**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

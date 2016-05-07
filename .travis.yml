@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.1
+
+branches:
+  except:
+  - gh-pages
+
+script:
+- bundle exec jekyll build

@@ -2,9 +2,7 @@ language: ruby
 rvm:
 - 2.1
 
-branches:
-  except:
-  - gh-pages
+install: gem install jekyll jekyll-sitemap
 
 script:
-- bundle exec jekyll build
+- jekyll build

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+
+	<!-- rss -->
+	<link rel="alternate" type="application/rss+xml" title="Hacker's Arsenal's RSS Feed" href="/rss.xml">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title> ProxyChains </title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1> Hacker's Arsenal </h1>
+        <h2>Open Source tools for Hackers</h2>
+        <a href="https://github.com/hackwith/hackwith.github.io" target="_blank" class="button"><small>Contribute on </small>Github</a><br>
+	  </div>
+    </header>
+	
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          
+          <h1>ProxyChains</h1>
+<p class="meta">Posted on 18 Feb 2016</p>
+
+<h2 id="current-version-420">Current version: 4.2.0</h2>
+
+<h2 id="build-status">Build Status</h2>
+
+<p>ProxyChains is a UNIX program, that hooks network-related <code class="highlighter-rouge">libc</code> functions in dynamically linked programs via a preloaded DLL and redirects the connections through SOCKS4a/5 or HTTP proxies.</p>
+
+<h3 id="warning">Warning</h3>
+<p>This program works only on dynamically linked programs. Also both proxychains and the program to call must use the same dynamic linker (i.e. same <code class="highlighter-rouge">libc</code>)</p>
+
+<h2 id="known-limitations-of-the-current-version">Known limitations of the current version</h2>
+<p>When a process forks, does a DNS lookup in the child, and then uses the IP in the parent, the corresponding ip mapping will not be found. This is because the fork can’t write back into the parents mapping table. IRSSI shows this behaviour, so you have to pass the resolved IP address to it. (You can use the <code class="highlighter-rouge">proxyresolv</code> script (requires <code class="highlighter-rouge">dig</code>) to do so)</p>
+
+<p>This means that you can’t currently use tor onion urls for irssi. To solve this issue, an external data store (<code class="highlighter-rouge">file</code>, <code class="highlighter-rouge">pipe</code>, …​) has to manage the <code class="highlighter-rouge">dns &lt;→ ip mapping</code>. Of course there has to be proper locking. <code class="highlighter-rouge">shm_open</code>, <code class="highlighter-rouge">mkstemp</code>, are possible candidates for a file based approach, the other option is to spawn some kind of server process that manages the map lookups. since <code class="highlighter-rouge">connect()</code> etc are hooked, this must not be a TCP server.</p>
+
+<h1 id="installation">Installation</h1>
+
+<h2 id="using-release-version">Using release version</h2>
+
+<p><b>Proxychains-4.2.0</b> are available with <code class="highlighter-rouge">pkgsrc</code> to everyone using it on Linux, NetBSD, FreeBSD, OpenBSD, DragonFlyBSD or Mac OS X. You just need to install <code class="highlighter-rouge">pkgsrc-wip</code> repository and run make install in a <code class="highlighter-rouge">wip/proxychains</code> directory.</p>
+
+<p>You can find out more about <code class="highlighter-rouge">pkgsrc</code> on pkgsrc and about <code class="highlighter-rouge">pkgsrc-wip</code> on Pkgsrc-wip homepage.</p>
+
+<h2 id="installing-on-mac-os-x-with-homebrew">Installing on Mac OS X with homebrew</h2>
+
+<p>You can install current proxychains on Mac OS X with an homebrew. You have to download unofficial homebrew formula from to your <code class="highlighter-rouge">BREW_HOME</code> by default <code class="highlighter-rouge">/usr/local/Library/Formula/</code> and run</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>brew install proxychains</code></pre></figure>
+
+<h2 id="running-current-source-code-version">Running Current Source code version</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># needs a working C compiler, preferably gcc</span>
+./configure
+make
+sudo make install</code></pre></figure>
+
+<h2 id="when-to-use-it">When to use it</h2>
+
+<ul>
+  <li>
+    <p>When the only way to get “outside” from your LAN is through proxy server.</p>
+  </li>
+  <li>
+    <p>To get out from behind restrictive firewall which filters outgoing ports.</p>
+  </li>
+  <li>
+    <p>To use two (or more) proxies in chain:</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">   like: your_host &lt;--&gt; proxy1 &lt;--&gt; proxy2 &lt;--&gt; target_host</code></pre></figure>
+
+<ul>
+  <li>
+    <p>To “proxify” some program with no proxy support built-in (like telnet)</p>
+  </li>
+  <li>
+    <p>Access intranet from outside via proxy.</p>
+  </li>
+  <li>
+    <p>To use DNS behind proxy.</p>
+  </li>
+</ul>
+
+<h2 id="to-know-more-about-proxychains-click-a-hrefhttpsgithubcomhaadproxychains-titleproxychains-targetblankherea">To know more about ProxyChains click <a href="https://github.com/haad/proxychains" title="ProxyChains" target="_blank">here</a></h2>
+
+<h2 id="useful-links">Useful links:</h2>
+<footer>
+<a href="https://github.com/pietromenna/jekyll-architect-theme/archive/master.zip" target="_blank" class="button">
+<small>Download</small>
+.zip file
+</a>
+</footer>
+
+
+
+        </section>
+
+        <aside id="sidebar">
+ 		  <a href="/rss.xml" title="Feed RSS" target="_blank">Follow it on RSS</a>
+		  <br />
+		  <br />
+         <a href="https://twitter.com/HackwithGithub" title="HackwithGithub" target="_blank" class="button">
+            <small>Tweet it on</small>
+			Twitter
+          </a>
+		  <a href="https://www.facebook.com/HackwithGithub/" title="HackwithGithub" target="_blank" class="button button1">
+            <small>Like it on</small>
+			Facebook
+          </a>
+          <p class="repo-owner"><a href="https://hackwith.github.io">hackwith.github.io</a> is maintained by <a href="https://twitter.com/bnchandrapal">Chandrapal</a>.</p>
+
+          <p>The bloggers contributing are: <br>
+		  - <a href="https://twitter.com/bnchandrapal">Chandrapal</a><br>
+		  - <a href="https://github.com/gjuniioor">Gildásio Júnior</a><br>
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacker's Arsenal</title>
+    <description>Hacker's Arsenal</description>
+    <link>https://hackwith.github.io</link>
+	
+		<title>Awesome Hacking</title>
+        <description>A collection of awesome lists for hackers, pentesters &amp; security researchers.</description>
+        <pubDate>Tue, 12 Jul 2016 05:30:00 +0530</pubDate>
+        <link>/hacking/2016/07/12/Awesome-hacking-tools.html</link>
+        <guid isPermaLink="true">https://hackwith.github.io/hacking/2016/07/12/Awesome-hacking-tools.html</guid>
+	
+		<title>CloudBot</title>
+        <description>CloudBot is a simple, fast, expandable open-source Python IRC Bot!</description>
+        <pubDate>Wed, 02 Mar 2016 05:30:00 +0530</pubDate>
+        <link>/bot/2016/03/02/CloudBot.html</link>
+        <guid isPermaLink="true">https://hackwith.github.io/bot/2016/03/02/CloudBot.html</guid>
+	
+		<title>ProxyChains</title>
+        <description>ProxyChains is a UNIX program, that hooks network-related libc functions in dynamically linked programs via a preloaded DLL and redirects the connections through SOCKS4a/5 or HTTP proxies.</description>
+        <pubDate>Thu, 18 Feb 2016 07:10:00 +0530</pubDate>
+        <link>/proxy/2016/02/18/ProxyChains.html</link>
+        <guid isPermaLink="true">https://hackwith.github.io/proxy/2016/02/18/ProxyChains.html</guid>
+	
+		<title>Hack with Github</title>
+        <description>More details about the author(s) and the motto of the blog.</description>
+        <pubDate>Thu, 18 Feb 2016 06:10:00 +0530</pubDate>
+        <link>/theme/2016/02/18/Theme.html</link>
+        <guid isPermaLink="true">https://hackwith.github.io/theme/2016/02/18/Theme.html</guid>
+	
+		<title>License</title>
+        <description>More information on the license of the blog.</description>
+        <pubDate>Thu, 18 Feb 2016 00:00:00 +0530</pubDate>
+        <link>/2016/02/18/license.html</link>
+        <guid isPermaLink="true">https://hackwith.github.io/2016/02/18/license.html</guid>
+	
+  </channel>
+</rss>

@@ -1,4 +1,4 @@
 name: Hacker's Arsenal
-markdown: redcarpet
+markdown: kramdown
 baseurl: ''
 url: https://hackwith.github.io

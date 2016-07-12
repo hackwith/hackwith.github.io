@@ -79,7 +79,7 @@ A collection of android security related resources
 ## [Awesome OSX and iOS Security](https://github.com/ashishb/osx-and-ios-security-awesome)
 OSX and iOS related security tools
 
-### Other useful repositories
+## Other useful repositories
 
 ## [APT Notes](https://github.com/kbandla/APTnotes)
 Various public documents, whitepapers and articles about APT campaigns
@@ -106,8 +106,8 @@ A collection of useful GitHub projects loosely categorised.
 A collection of cheatsheets for various infosec tools and topics.
 
 ----
-##To fork this on Github click [here](https://github.com/Hack-with-Github/Awesome-Hacking)
 
+## To fork this on Github click [here](https://github.com/Hack-with-Github/Awesome-Hacking)
 
 <footer>
 <a href="https://github.com/Hack-with-Github/Awesome-Hacking/archive/master.zip" target="_blank" class="button">
